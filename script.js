@@ -2,7 +2,7 @@ jQuery(document).ready(function() {
 
     var sentence = prompt("type your sentence");
     var newSentence;
-    console.log(sentence);
+    // console.log(sentence);
   
 
     function symbols (sentence){
@@ -13,7 +13,17 @@ jQuery(document).ready(function() {
         //censored.toUpperCase();
         return censored.toUpperCase();
     }
-    alert(symbols(sentence));
+    
+    // alert(symbols(sentence));
+    
+
+    function reverse (sentence) {
+        var finalString1 = sentence.charAt(sentence.length - 1) + sentence.charAt(0);
+        return finalString1.toUpperCase();
+    }
+
+    alert(reverse(sentence));
+
 
     
     

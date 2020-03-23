@@ -5,23 +5,36 @@ jQuery(document).ready(function() {
     console.log(sentence);
   
 
-    function capitalize(sentence){
-        // var newSentence = /^\w+/     
-          
-        var re = /(\b[a-z](?!\s))/g;
-        newSentence = sentence.replace(re, function(x){return x.toUpperCase();});
+    function symbols (sentence){
+        var regex = /(?<!^).(?!$)/g;
+        //var w = sentence;
+        //var censored = sentence.replace(regex, function(x){return x.toUpperCase();});
+        var censored = sentence.replace(regex, '');
+        //censored.toUpperCase();
+        return censored.toUpperCase();
+    }
+    alert(symbols(sentence));
 
-        return newSentence;
+    
+    
+    
+    // function capitalize(sentence){
+    //     // var newSentence = /^\w+/     
+          
+    //     var re = /(\b[a-z](?!\s))/g;
+    //     newSentence = sentence.replace(re, function(x){return x.toUpperCase();});
+
+    //     return newSentence;
         
 
 
 
         //var finalString = sentence.charAt(0) + ;
         
+ 
+//     }
 
-    }
-
-console.log(capitalize(sentence))
+// console.log(capitalize(sentence))
 
 
 

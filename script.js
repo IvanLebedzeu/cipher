@@ -1,30 +1,45 @@
 jQuery(document).ready(function() {
 
     var sentence = prompt("type your sentence");
-    var newSentence;
-    // console.log(sentence);
+    //var newSentence1;
+    console.log(sentence);
+    var newSentence1;
+    var reverseSent;
+    
+
   
 
-    function symbols (sentence){
-        var regex = /(?<!^).(?!$)/g;
-        //var w = sentence;
-        //var censored = sentence.replace(regex, function(x){return x.toUpperCase();});
-        var censored = sentence.replace(regex, '');
+        newSentence1 = function symbols (sentence){
+        //var regex = /(?<!^).(?!$)/g; //it works but looks weird
+        //var censored = sentence.replace(regex, ''); //it works but looks weird
+        
+        var newSentence = sentence.charAt(0) + sentence.charAt(sentence.length - 1)
         //censored.toUpperCase();
-        return censored.toUpperCase();
+        return newSentence.toUpperCase();
+        //return newSentence;
     }
     
-    // alert(symbols(sentence));
+    //newSentence1 = sentence;
+
+    alert(newSentence1(sentence));
+    console.log(newSentence1);
     
 
-    function reverse (sentence) {
+        function reverse (sentence) {
         var finalString1 = sentence.charAt(sentence.length - 1) + sentence.charAt(0);
+        //return finalString1.toUpperCase();
         return finalString1.toUpperCase();
-    }
+     }
 
-    alert(reverse(sentence));
+     alert(reverse(sentence)); 
 
+     function mainFunction(sentence)    {
+         symbols(sentence);
+         reverse(sentence);
+         return(sentence); 
 
+     }
+     alert(mainFunction(sentence));
     
     
     
